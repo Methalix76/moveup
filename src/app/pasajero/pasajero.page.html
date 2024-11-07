@@ -1,0 +1,45 @@
+<ion-header [translucent]="false">
+  <ion-toolbar>
+    <ion-img src="assets/img/move up!.png"/>
+  </ion-toolbar>
+</ion-header>
+
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="primary">
+      <ion-back-button defaultHref="/" text="Atras"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="start-text">
+      <div style="display: flex; justify-content: space-between; align-items: center;"> <!-- <------------------modif relacionada a vinculo a perfil--->
+        <h1 style="margin-right: 5px;">PASAJERO</h1>
+        <ion-img src="assets/icon/gente.png" style="width: 20%; height: 20%;" (click)="goToProfile()"/> <!-- <------------------modif relacionada a vinculo a perfil--->
+      </div>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <p>Bienvenido, pasajero</p>
+
+<br>
+<ion-button expand="full" color="primary" (click)="solicitarViaje()">
+  Solicitar Viaje
+</ion-button>
+<br>
+<ion-button expand="full" color="secondary" (click)="viajeDispo()">
+  Viajes disponibles
+</ion-button>
+<br>
+<ion-button expand="full" color="tertiary" (click)="verSolicitudes()">
+  Solicitudes
+</ion-button>
+</ion-content>
+
+
+
+
+<ion-footer>
+  <ion-toolbar>
+    <p class="centered-text">powered by V&A</p>
+  </ion-toolbar>
+</ion-footer>

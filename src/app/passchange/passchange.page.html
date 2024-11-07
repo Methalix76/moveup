@@ -1,0 +1,43 @@
+<ion-header [translucent]="false">
+  <ion-toolbar>
+    <ion-img src="assets/img/move up!.png"/>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-buttons slot="primary">
+      <ion-back-button defaultHref="/registro" text="Atras"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <br>
+  <div class="centered-div">
+    <ion-toolbar>
+      <ion-img src="assets/img/moveup.png"/>
+    </ion-toolbar>
+  </div>
+  <br>
+  <h5><p class="centered-text">RESTABLECER CONTRASEÑA</p></h5>
+  <br>
+  <ion-list>
+    <ion-item>
+      <ion-label position="floating">Usuario</ion-label>
+      <ion-input [(ngModel)]="usuario" type="text" placeholder="Ingresar correo electrónico"></ion-input> <!-- <-------------------------------cambio pass----- -->
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Nueva Contraseña</ion-label>
+      <ion-input [(ngModel)]="newPass" type="password" placeholder="Ingresar nueva contraseña"></ion-input> <!-- <-------------------------------cambio pass----- -->
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Confirmar Nueva Contraseña</ion-label>
+      <ion-input [(ngModel)]="confirmNewPass" type="password" placeholder="Confirmar nueva contraseña"></ion-input> <!-- <-------------------------------cambio pass----- -->
+    </ion-item>
+  </ion-list>
+  <ion-button (click)="resetPassword()" expand="block" color="warning">Restablecer Contraseña</ion-button> <!-- <-------------------------------cambio pass----- -->
+</ion-content> <!-- <-------------------------------cambio pass----- -->
+
+<ion-footer>
+  <ion-toolbar>
+    <p class="centered-text">powered by V&A</p>
+  </ion-toolbar>
+</ion-footer>

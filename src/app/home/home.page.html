@@ -1,0 +1,35 @@
+
+<ion-header [translucent]="false">
+  <ion-toolbar>
+    <ion-img src="assets/img/bienvenido-move up!.png"/>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <br>
+  <div class="centered-div">
+    <ion-toolbar>
+      <ion-img src="assets/img/moveup.png"/>
+    </ion-toolbar>
+  </div>
+  <br>
+  <br>
+  <h2><p class="centered-text">- I N G R E S A R -</p></h2>
+  <br>
+  <br>
+  <ion-button (click)="goToLogin()" expand="block" color="success" class="bold-text">Ir a Login</ion-button> 
+  <br>
+  <div class="centered-text">
+
+    <br>
+    <ion-text class="bold-text" style="color: #ffffff;">Eres usuario nuevo?</ion-text>
+  </div>
+  <ion-button (click)="irARegistro()" expand="block" color="warning" class="bold-text">Registrarte</ion-button>
+  <br>
+  <br>
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <p class="centered-text">powered by V&A</p>
+  </ion-toolbar>
+</ion-footer>

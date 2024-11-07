@@ -1,0 +1,38 @@
+<ion-header [translucent]="false">
+  <ion-toolbar>
+    <ion-img src="assets/img/move up!.png"/>
+  </ion-toolbar>
+</ion-header>
+
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="primary">
+      <ion-back-button defaultHref="/" text="Atras"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="centered-text">
+      <h1>Perfil de Usuario</h1>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<!-- -----------modif relacionada a vinculo a perfil-c  --->
+<ion-content>
+  <p>Hola!, {{ nombre }}</p> <!-- -----------modif relacionada a vinculo a perfil-c  --->
+  <ion-list>
+    <ion-item>
+      <ion-label>Nombre:</ion-label>
+      <ion-text>{{ nombre }}</ion-text> <!-- -----------modif relacionada a vinculo a perfil-c  --->
+    </ion-item>
+    <ion-item>
+      <ion-label>Usuario:</ion-label>
+      <ion-text>{{ usuario }}</ion-text> <!-- -----------modif relacionada a vinculo a perfil-c  --->
+    </ion-item>
+  </ion-list>
+</ion-content>
+<!-- -----------modif relacionada a vinculo a perfil-c  --->
+
+<ion-footer>
+  <ion-toolbar>
+    <p class="centered-text">powered by V&A</p>
+  </ion-toolbar>
+</ion-footer>

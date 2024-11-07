@@ -1,0 +1,36 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="primary">
+      <ion-back-button defaultHref="/" text="Atras"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="start-text">
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+        <h1 style="margin-right: 5px;">CONDUCTOR</h1>
+        <ion-img src="assets/icon/gente.png" style="width: 20%; height: 20%;" (click)="goToProfile()"/>
+      </div>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <p>Bienvenido, {{ nombre }}</p>
+</ion-content>
+
+<ion-content>
+  <ion-button expand="full" color="primary" (click)="crearViaje()">
+    Crear viaje
+  </ion-button>
+<br>
+  <ion-button expand="full" color="tertiary" (click)="verSolicitudes()">
+    Solicitudes
+  </ion-button>
+<br>
+</ion-content>
+
+
+<ion-footer>
+  <ion-toolbar>
+    <p class="centered-text">powered by V&A</p>
+  </ion-toolbar>
+</ion-footer>
+

@@ -1,0 +1,33 @@
+<ion-header [translucent]="false">
+  <ion-toolbar>
+    <ion-img src="assets/img/move up!.png"/>
+  </ion-toolbar>
+</ion-header>
+
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="primary">
+      <ion-back-button defaultHref="/conductor" text="Atras"></ion-back-button>
+    </ion-buttons>
+    <br>
+    <ion-title><h1>VIAJES</h1></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let viaje of viajes | async">
+      <ion-label>
+        <h2>Origen: {{ viaje.origen }}</h2>
+        <h3>Destino: {{ viaje.destino }}</h3>
+        <p>Fecha: {{ viaje.fecha | date }}</p>
+        
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <p class="centered-text">powered by V&A</p>
+  </ion-toolbar>
+</ion-footer>

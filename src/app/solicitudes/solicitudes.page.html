@@ -1,0 +1,34 @@
+<ion-header [translucent]="false">
+  <ion-toolbar>
+    <ion-img src="assets/img/move up!.png"/>
+  </ion-toolbar>
+</ion-header>
+
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="primary">
+      <ion-back-button defaultHref="/" text="Atras"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="centered-text"><h1>SOLICITUDES</h1></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let solicitud of solicitudes | async">
+      <ion-label>
+        <h2>Origen: {{ solicitud.origen }}</h2>
+        <h3>Destino: {{ solicitud.destino }}</h3>
+        <p>Fecha: {{ solicitud.fecha | date }}</p>
+        <p>Estado: {{ solicitud.estado }}</p>
+      </ion-label>
+      <ion-button (click)="aceptarSolicitud(solicitud.id)">Aceptar</ion-button>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <p class="centered-text">powered by V&A</p>
+  </ion-toolbar>
+</ion-footer>

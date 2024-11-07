@@ -1,0 +1,39 @@
+<ion-header [translucent]="false">
+  <ion-toolbar>
+    <ion-img src="assets/img/move up!.png"/>
+  </ion-toolbar>
+</ion-header>
+
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="primary">
+      <ion-back-button defaultHref="/conductor" text="Atras"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="centered-text"><h1>CREAR VIAJE</h1></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <form [formGroup]="viajeForm">
+    <ion-item>
+      <ion-label position="floating">Origen</ion-label>
+      <ion-input formControlName="origen"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Destino</ion-label>
+      <ion-input formControlName="destino"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Fecha</ion-label>
+      <ion-datetime formControlName="fecha" displayFormat="MM/DD/YYYY"></ion-datetime>
+    </ion-item>
+
+    <ion-button expand="full" color="primary" (click)="nuevoViaje()" [disabled]="!viajeForm.valid">
+      Crear Viaje
+    </ion-button>
+  </form>
+  
+</ion-content>
